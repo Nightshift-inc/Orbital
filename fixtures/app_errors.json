@@ -1,0 +1,29 @@
+[
+  {
+    "error_id": "err_7f3a2b1c",
+    "service": "auth-service",
+    "message": "TypeError: Cannot read properties of undefined (reading 'session_token')",
+    "stack_frames": [
+      "src/auth/middleware.ts:43",
+      "src/auth/token.ts:17",
+      "src/gateway/router.ts:89"
+    ],
+    "first_seen": "2026-04-22T01:48:00Z",
+    "last_seen": "2026-04-22T02:18:00Z",
+    "count": 847,
+    "affected_endpoint": "POST /api/auth/login"
+  },
+  {
+    "error_id": "err_9c2d4e5f",
+    "service": "auth-service",
+    "message": "TypeError: Cannot read properties of undefined (reading 'session_token')",
+    "stack_frames": [
+      "src/auth/middleware.ts:43",
+      "src/gateway/router.ts:34"
+    ],
+    "first_seen": "2026-04-22T01:48:12Z",
+    "last_seen": "2026-04-22T02:18:00Z",
+    "count": 312,
+    "affected_endpoint": "POST /api/checkout"
+  }
+]

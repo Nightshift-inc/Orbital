@@ -1,0 +1,22 @@
+name: Deploy Auth Service
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/auth/**'
+
+jobs:
+  deploy:
+    name: Deploy auth-service to production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build
+        working-directory: src/auth
+        run: npm install && npm run build
+      - name: Deploy (stub)
+        run: echo "Deploying auth-service at SHA ${{ github.sha }}"

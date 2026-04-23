@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #0F172A;
+  color: #F1F5F9;
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #0f172a;
+  }
+
+  nav,
+  [data-print="hide"] {
+    display: none !important;
+  }
+
+  [data-print="invoice"] {
+    background: #fff;
+    color: #0f172a;
+  }
+
+  [data-print="invoice"] .divide-y > * {
+    border-color: #e2e8f0;
+  }
+
+  [data-print="invoice"] .border-t,
+  [data-print="invoice"] .border-b {
+    border-color: #e2e8f0;
+  }
+
+  [data-print="invoice"] .bg-orbital-surface {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+  }
+
+  [data-print="invoice"] .text-slate-400 {
+    color: #64748b;
+  }
+
+  [data-print="invoice"] .text-white,
+  [data-print="invoice"] .text-slate-300 {
+    color: #0f172a;
+  }
+
+  [data-print="invoice"] .bg-green-900 { background: #f0fdf4; }
+  [data-print="invoice"] .text-green-300 { color: #16a34a; }
+  [data-print="invoice"] .bg-blue-900 { background: #eff6ff; }
+  [data-print="invoice"] .text-blue-300 { color: #2563eb; }
+  [data-print="invoice"] .bg-red-900 { background: #fef2f2; }
+  [data-print="invoice"] .text-red-300 { color: #dc2626; }
+  [data-print="invoice"] .bg-slate-700 { background: #f1f5f9; }
+  [data-print="invoice"] .text-slate-400 { color: #64748b; }
+}

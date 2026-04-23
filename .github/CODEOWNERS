@@ -1,0 +1,10 @@
+# Orbital — code ownership
+# See .github/workflows/ for deploy responsibilities.
+
+/src/auth/       @auth-team
+/src/payment/    @payments-team
+/src/gateway/    @platform-team
+/src/dashboard/  @frontend-team
+
+# Catch-all for repo-wide config, workflows, etc.
+*                @platform-team

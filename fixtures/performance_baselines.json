@@ -1,0 +1,98 @@
+[
+  {
+    "service_id": "auth-service",
+    "endpoint": "POST /api/auth/login",
+    "week_bucket": "2026-W14",
+    "baseline_ms": 42,
+    "observed_ms": 41,
+    "sample_size": 12430
+  },
+  {
+    "service_id": "auth-service",
+    "endpoint": "POST /api/auth/login",
+    "week_bucket": "2026-W15",
+    "baseline_ms": 42,
+    "observed_ms": 44,
+    "sample_size": 13102
+  },
+  {
+    "service_id": "auth-service",
+    "endpoint": "POST /api/auth/login",
+    "week_bucket": "2026-W16",
+    "baseline_ms": 42,
+    "observed_ms": 51,
+    "sample_size": 14287
+  },
+  {
+    "service_id": "auth-service",
+    "endpoint": "POST /api/auth/login",
+    "week_bucket": "2026-W17",
+    "baseline_ms": 42,
+    "observed_ms": 89,
+    "sample_size": 8934
+  },
+  {
+    "service_id": "payment-gateway",
+    "endpoint": "POST /charge",
+    "week_bucket": "2026-W14",
+    "baseline_ms": 180,
+    "observed_ms": 178,
+    "sample_size": 8421
+  },
+  {
+    "service_id": "payment-gateway",
+    "endpoint": "POST /charge",
+    "week_bucket": "2026-W15",
+    "baseline_ms": 180,
+    "observed_ms": 182,
+    "sample_size": 9102
+  },
+  {
+    "service_id": "payment-gateway",
+    "endpoint": "POST /charge",
+    "week_bucket": "2026-W16",
+    "baseline_ms": 180,
+    "observed_ms": 195,
+    "sample_size": 9688
+  },
+  {
+    "service_id": "payment-gateway",
+    "endpoint": "POST /charge",
+    "week_bucket": "2026-W17",
+    "baseline_ms": 180,
+    "observed_ms": 230,
+    "sample_size": 6214
+  },
+  {
+    "service_id": "api-gateway",
+    "endpoint": "POST /api/auth/login",
+    "week_bucket": "2026-W14",
+    "baseline_ms": 25,
+    "observed_ms": 26,
+    "sample_size": 21103
+  },
+  {
+    "service_id": "api-gateway",
+    "endpoint": "POST /api/auth/login",
+    "week_bucket": "2026-W15",
+    "baseline_ms": 25,
+    "observed_ms": 24,
+    "sample_size": 22441
+  },
+  {
+    "service_id": "api-gateway",
+    "endpoint": "POST /api/auth/login",
+    "week_bucket": "2026-W16",
+    "baseline_ms": 25,
+    "observed_ms": 27,
+    "sample_size": 23098
+  },
+  {
+    "service_id": "api-gateway",
+    "endpoint": "POST /api/auth/login",
+    "week_bucket": "2026-W17",
+    "baseline_ms": 25,
+    "observed_ms": 31,
+    "sample_size": 15872
+  }
+]

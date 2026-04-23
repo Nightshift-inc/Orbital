@@ -1,0 +1,20 @@
+[
+  {
+    "change_id": "cfg_a1b2c3d4",
+    "service": "auth-service",
+    "key": "LOG_ROTATE_INTERVAL",
+    "old_value": "24h",
+    "new_value": "6h",
+    "changed_at": "2026-04-22T01:45:45Z",
+    "changed_by": "jsmith"
+  },
+  {
+    "change_id": "cfg_d4e5f6a7",
+    "service": "api-gateway",
+    "key": "RATE_LIMIT_RPS",
+    "old_value": "100",
+    "new_value": "200",
+    "changed_at": "2026-04-22T00:10:00Z",
+    "changed_by": "mkim"
+  }
+]

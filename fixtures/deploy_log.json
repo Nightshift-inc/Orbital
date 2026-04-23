@@ -1,0 +1,52 @@
+[
+  {
+    "deploy_id": "deploy_a1b2c3d4",
+    "service": "auth-service",
+    "sha": "e4f2a1c9b3d8e7f6a5b4c3d2e1f0a9b8c7d6e5f4",
+    "deployed_at": "2026-04-22T01:46:30Z",
+    "deployer": "github-actions[bot]",
+    "environment": "production",
+    "status": "success",
+    "duration_seconds": 45
+  },
+  {
+    "deploy_id": "deploy_d4e5f6a7",
+    "service": "payment-gateway",
+    "sha": "9f8e7d6c5b4a3928176534f2e1d0c9b8a7f6e5d4",
+    "deployed_at": "2026-04-22T00:30:00Z",
+    "deployer": "github-actions[bot]",
+    "environment": "production",
+    "status": "success",
+    "duration_seconds": 52
+  },
+  {
+    "deploy_id": "deploy_g7h8i9j0",
+    "service": "api-gateway",
+    "sha": "1a2b3c4d5e6f7890abcdef1234567890abcdef12",
+    "deployed_at": "2026-04-21T23:55:00Z",
+    "deployer": "mkim",
+    "environment": "production",
+    "status": "success",
+    "duration_seconds": 38
+  },
+  {
+    "deploy_id": "deploy_j0k1l2m3",
+    "service": "payment-gateway",
+    "sha": "4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c",
+    "deployed_at": "2026-04-15T14:22:00Z",
+    "deployer": "github-actions[bot]",
+    "environment": "production",
+    "status": "success",
+    "duration_seconds": 48
+  },
+  {
+    "deploy_id": "deploy_n4o5p6q7",
+    "service": "auth-service",
+    "sha": "5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e",
+    "deployed_at": "2026-04-10T10:15:00Z",
+    "deployer": "github-actions[bot]",
+    "environment": "production",
+    "status": "success",
+    "duration_seconds": 42
+  }
+]

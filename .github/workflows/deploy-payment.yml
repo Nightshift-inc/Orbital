@@ -1,0 +1,22 @@
+name: Deploy Payment Gateway
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'src/payment/**'
+
+jobs:
+  deploy:
+    name: Deploy payment-gateway to production
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build
+        working-directory: src/payment
+        run: npm install && npm run build
+      - name: Deploy (stub)
+        run: echo "Deploying payment-gateway at SHA ${{ github.sha }}"

@@ -1,0 +1,365 @@
+[
+  {
+    "pr_number": 820,
+    "title": "Improve session store connection pooling",
+    "author": "jsmith",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1001?v=4",
+    "merged_at": "2026-03-31T14:22:00Z",
+    "sha": "aa11bb22cc33dd44ee55ff66aa77bb88cc99dd00",
+    "files_changed": [
+      "src/auth/index.ts",
+      "src/auth/token.ts"
+    ],
+    "week_bucket": "2026-W14",
+    "body_excerpt": "Reduces session store reconnect churn under load."
+  },
+  {
+    "pr_number": 821,
+    "title": "Add metrics endpoint to auth service",
+    "author": "nchen",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1002?v=4",
+    "merged_at": "2026-04-02T09:45:00Z",
+    "sha": "bb22cc33dd44ee55ff66aa77bb88cc99dd00ee11",
+    "files_changed": [
+      "src/auth/index.ts"
+    ],
+    "week_bucket": "2026-W14",
+    "body_excerpt": "Exposes /metrics for Prometheus scraping."
+  },
+  {
+    "pr_number": 822,
+    "title": "Upgrade stripe-node to v14",
+    "author": "rsingh",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1003?v=4",
+    "merged_at": "2026-04-03T16:10:00Z",
+    "sha": "cc33dd44ee55ff66aa77bb88cc99dd00ee11ff22",
+    "files_changed": [
+      "src/payment/package.json",
+      "src/payment/payment-processor.ts"
+    ],
+    "week_bucket": "2026-W14",
+    "body_excerpt": "Bumps stripe-node. No API changes required."
+  },
+  {
+    "pr_number": 823,
+    "title": "Add invoices table to merchant dashboard",
+    "author": "jlee",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1007?v=4",
+    "merged_at": "2026-04-02T15:40:00Z",
+    "sha": "e66f77a88b99c00dd11ee22ff33445566aa11",
+    "files_changed": [
+      "src/dashboard/app/invoices/page.tsx",
+      "src/dashboard/components/InvoiceTable.tsx"
+    ],
+    "week_bucket": "2026-W14",
+    "body_excerpt": "First pass at the invoices list view."
+  },
+  {
+    "pr_number": 825,
+    "title": "Extract token decoding helper",
+    "author": "jsmith",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1001?v=4",
+    "merged_at": "2026-04-07T11:30:00Z",
+    "sha": "dd44ee55ff66aa77bb88cc99dd00ee11ff2233",
+    "files_changed": [
+      "src/auth/token.ts"
+    ],
+    "week_bucket": "2026-W15",
+    "body_excerpt": "Move decode logic into a reusable helper.",
+    "investigation_override": {
+      "role": "evaluated_clean",
+      "investigation_id": "inv_hist_001",
+      "max_confidence": 0
+    }
+  },
+  {
+    "pr_number": 826,
+    "title": "Route request-id header through gateway",
+    "author": "mkim",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1004?v=4",
+    "merged_at": "2026-04-08T15:22:00Z",
+    "sha": "ee55ff66aa77bb88cc99dd00ee11ff223344",
+    "files_changed": [
+      "src/gateway/router.ts"
+    ],
+    "week_bucket": "2026-W15",
+    "body_excerpt": "Forward X-Request-ID to downstream services."
+  },
+  {
+    "pr_number": 827,
+    "title": "Tighten CORS allowlist",
+    "author": "nchen",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1002?v=4",
+    "merged_at": "2026-04-09T10:05:00Z",
+    "sha": "ff66aa77bb88cc99dd00ee11ff22334455",
+    "files_changed": [
+      "src/auth/index.ts"
+    ],
+    "week_bucket": "2026-W15",
+    "body_excerpt": "Only allow requests from the documented client origins."
+  },
+  {
+    "pr_number": 828,
+    "title": "Refactor token expiry check",
+    "author": "jsmith",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1001?v=4",
+    "merged_at": "2026-04-10T14:17:00Z",
+    "sha": "aa77bb88cc99dd00ee11ff2233445566",
+    "files_changed": [
+      "src/auth/token.ts"
+    ],
+    "week_bucket": "2026-W15",
+    "body_excerpt": "Consolidate expiry logic into a single comparator."
+  },
+  {
+    "pr_number": 829,
+    "title": "Add per-route rate limit config",
+    "author": "tpark",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1005?v=4",
+    "merged_at": "2026-04-11T13:40:00Z",
+    "sha": "bb88cc99dd00ee11ff223344556677",
+    "files_changed": [
+      "src/gateway/router.ts",
+      "src/gateway/index.ts"
+    ],
+    "week_bucket": "2026-W15",
+    "body_excerpt": "Move rate limit values into per-route config."
+  },
+  {
+    "pr_number": 831,
+    "title": "Add MRR metric card to dashboard overview",
+    "author": "jlee",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1007?v=4",
+    "merged_at": "2026-04-10T11:05:00Z",
+    "sha": "ff77a88b99c00dd11ee22ff3344556677bb22",
+    "files_changed": [
+      "src/dashboard/app/dashboard/page.tsx",
+      "src/dashboard/lib/api-client.ts"
+    ],
+    "week_bucket": "2026-W15",
+    "body_excerpt": "Adds MRR, active subs, and churn rate to the overview page."
+  },
+  {
+    "pr_number": 833,
+    "title": "Add idempotency key support to charge endpoint",
+    "author": "rsingh",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1003?v=4",
+    "merged_at": "2026-04-14T10:20:00Z",
+    "sha": "cc99dd00ee11ff22334455667788",
+    "files_changed": [
+      "src/payment/index.ts",
+      "src/payment/payment-processor.ts"
+    ],
+    "week_bucket": "2026-W16",
+    "body_excerpt": "Honour client-provided idempotency keys."
+  },
+  {
+    "pr_number": 834,
+    "title": "Migrate payment-processor to async/await",
+    "author": "alee",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1006?v=4",
+    "merged_at": "2026-04-15T16:50:00Z",
+    "sha": "dd00ee11ff2233445566778899",
+    "files_changed": [
+      "src/payment/payment-processor.ts"
+    ],
+    "week_bucket": "2026-W16",
+    "body_excerpt": "Remove last of the .then() chains."
+  },
+  {
+    "pr_number": 835,
+    "title": "Swap session ID generator to ULID",
+    "author": "jsmith",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1001?v=4",
+    "merged_at": "2026-04-16T11:12:00Z",
+    "sha": "ee11ff223344556677889900",
+    "files_changed": [
+      "src/auth/token.ts"
+    ],
+    "week_bucket": "2026-W16",
+    "body_excerpt": "Replace UUIDv4 session IDs with ULIDs.",
+    "investigation_override": {
+      "role": "suspect",
+      "investigation_id": "inv_hist_002",
+      "max_confidence": 45
+    }
+  },
+  {
+    "pr_number": 836,
+    "title": "Drop deprecated auth cookie name support",
+    "author": "nchen",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1002?v=4",
+    "merged_at": "2026-04-17T09:30:00Z",
+    "sha": "ff223344556677889900aabb",
+    "files_changed": [
+      "src/auth/middleware.ts"
+    ],
+    "week_bucket": "2026-W16",
+    "body_excerpt": "Remove legacy `auth_token` cookie fallback."
+  },
+  {
+    "pr_number": 838,
+    "title": "Dashboard: dark theme and nav refresh",
+    "author": "pramirez",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1008?v=4",
+    "merged_at": "2026-04-18T14:30:00Z",
+    "sha": "aa88b99c00dd11ee22ff334455667788cc33",
+    "files_changed": [
+      "src/dashboard/app/globals.css",
+      "src/dashboard/components/Nav.tsx",
+      "src/dashboard/tailwind.config.ts"
+    ],
+    "week_bucket": "2026-W16",
+    "body_excerpt": "Rebrand the dashboard chrome to match the new marketing site."
+  },
+  {
+    "pr_number": 841,
+    "title": "Add rate limiting headers to API responses",
+    "author": "mkim",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1004?v=4",
+    "merged_at": "2026-04-21T21:48:00Z",
+    "sha": "a11a22b33c44d55e66f77a88b99c00dd11ee22ff",
+    "files_changed": [
+      "src/gateway/router.ts",
+      "src/gateway/index.ts"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Surface X-RateLimit-Remaining to clients."
+  },
+  {
+    "pr_number": 843,
+    "title": "Upgrade payment client library to v3.2",
+    "author": "rsingh",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1003?v=4",
+    "merged_at": "2026-04-22T00:18:00Z",
+    "sha": "b22b33c44d55e66f77a88b99c00dd11ee22ff33",
+    "files_changed": [
+      "src/payment/package.json",
+      "src/payment/payment-processor.ts"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Bumps payment client to v3.2. Breaking changes in webhook signatures."
+  },
+  {
+    "pr_number": 844,
+    "title": "Refactor token caching layer",
+    "author": "jsmith",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1001?v=4",
+    "merged_at": "2026-04-22T00:55:00Z",
+    "sha": "c33c44d55e66f77a88b99c00dd11ee22ff3344",
+    "files_changed": [
+      "src/auth/token.ts"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Extract the in-memory cache into its own module."
+  },
+  {
+    "pr_number": 845,
+    "title": "Update logging config \u2014 rotate interval",
+    "author": "jsmith",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1001?v=4",
+    "merged_at": "2026-04-22T01:20:00Z",
+    "sha": "d44d55e66f77a88b99c00dd11ee22ff334455",
+    "files_changed": [
+      "src/auth/index.ts"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Rotate auth-service logs every 6 hours instead of every 24."
+  },
+  {
+    "pr_number": 846,
+    "title": "Fix typo in auth service README",
+    "author": "jsmith",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1001?v=4",
+    "merged_at": "2026-04-22T01:35:00Z",
+    "sha": "e55e66f77a88b99c00dd11ee22ff33445566",
+    "files_changed": [
+      "src/auth/README.md"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Trivial typo fix."
+  },
+  {
+    "pr_number": 847,
+    "title": "Refactor auth middleware: migrate from header to cookie token",
+    "author": "jsmith",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1001?v=4",
+    "merged_at": "2026-04-22T01:46:00Z",
+    "sha": "e4f2a1c9b3d8e7f6a5b4c3d2e1f0a9b8c7d6e5f4",
+    "files_changed": [
+      "src/auth/middleware.ts"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Session tokens now come from req.cookies.session instead of the Authorization header. Follows the infra team's cookie-first direction.",
+    "investigation_override": {
+      "role": "guilty",
+      "investigation_id": "inv_hist_003",
+      "max_confidence": 90
+    }
+  },
+  {
+    "pr_number": 848,
+    "title": "Add structured logging to token.validate",
+    "author": "nchen",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1002?v=4",
+    "merged_at": "2026-04-21T19:10:00Z",
+    "sha": "f66f77a88b99c00dd11ee22ff3344556677",
+    "files_changed": [
+      "src/auth/token.ts"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Log validation outcomes as JSON."
+  },
+  {
+    "pr_number": 849,
+    "title": "Remove dead import in middleware",
+    "author": "nchen",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1002?v=4",
+    "merged_at": "2026-04-21T20:05:00Z",
+    "sha": "a77a88b99c00dd11ee22ff334455667788",
+    "files_changed": [
+      "src/auth/middleware.ts"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Tidy-up."
+  },
+  {
+    "pr_number": 850,
+    "title": "Propagate charge errors with richer context",
+    "author": "alee",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1006?v=4",
+    "merged_at": "2026-04-21T17:30:00Z",
+    "sha": "b88b99c00dd11ee22ff33445566778899",
+    "files_changed": [
+      "src/payment/payment-processor.ts"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Attach charge_id and amount to payment errors."
+  },
+  {
+    "pr_number": 851,
+    "title": "Add README note about PAYMENT_SERVICE_PORT",
+    "author": "rsingh",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1003?v=4",
+    "merged_at": "2026-04-21T18:22:00Z",
+    "sha": "c99c00dd11ee22ff334455667788990011",
+    "files_changed": [
+      "src/payment/README.md"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Document the port env var."
+  },
+  {
+    "pr_number": 852,
+    "title": "Cache health probe responses",
+    "author": "mkim",
+    "author_avatar_url": "https://avatars.githubusercontent.com/u/1004?v=4",
+    "merged_at": "2026-04-21T22:40:00Z",
+    "sha": "d00d11ee22ff3344556677889900112233",
+    "files_changed": [
+      "src/gateway/index.ts"
+    ],
+    "week_bucket": "2026-W17",
+    "body_excerpt": "Short-circuit /health responses with a 1s cache."
+  }
+]

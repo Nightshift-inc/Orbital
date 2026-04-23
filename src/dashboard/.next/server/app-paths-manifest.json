@@ -1,0 +1,8 @@
+{
+  "/subscriptions/page": "app/subscriptions/page.js",
+  "/invoices/page": "app/invoices/page.js",
+  "/settings/page": "app/settings/page.js",
+  "/customers/page": "app/customers/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/invoices/[id]/page": "app/invoices/[id]/page.js"
+}
