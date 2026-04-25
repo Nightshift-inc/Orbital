@@ -1,0 +1,111 @@
+{
+  "deployLog": [
+    {
+      "id": "deploy-001",
+      "service": "auth-service",
+      "version": "v2.3.1",
+      "timestamp": "2026-04-25T02:00:00Z",
+      "deployed_by": "ci-bot",
+      "pr_number": 47,
+      "pr_title": "fix: update JWT signing algorithm from HS256 to RS256 for enhanced security",
+      "status": "success",
+      "duration_seconds": 42,
+      "environment": "production"
+    },
+    {
+      "id": "deploy-002",
+      "service": "notification-service",
+      "version": "v1.8.0",
+      "timestamp": "2026-04-25T01:45:00Z",
+      "deployed_by": "ci-bot",
+      "pr_number": 52,
+      "pr_title": "chore: update email rate limit config to 500/hr",
+      "status": "success",
+      "duration_seconds": 28,
+      "environment": "production"
+    },
+    {
+      "id": "deploy-003",
+      "service": "api-gateway",
+      "version": "v3.1.2",
+      "timestamp": "2026-04-24T18:30:00Z",
+      "deployed_by": "ci-bot",
+      "pr_number": 41,
+      "pr_title": "feat: add request tracing headers",
+      "status": "success",
+      "duration_seconds": 55,
+      "environment": "production"
+    }
+  ],
+  "appErrors": [
+    {
+      "id": "err-001",
+      "service": "api-gateway",
+      "error": "JWT signature verification failed",
+      "message": "Token verification error: invalid signature. Expected RS256, received HS256.",
+      "count": 847,
+      "first_seen": "2026-04-25T02:02:14Z",
+      "last_seen": "2026-04-25T02:17:45Z",
+      "severity": "critical",
+      "affected_endpoint": "/api/v1/users/*",
+      "stack_trace": "Error: JWT signature verification failed\n  at verifyToken (auth-middleware.ts:84)\n  at authenticate (api-gateway/src/middleware/auth.ts:31)"
+    },
+    {
+      "id": "err-002",
+      "service": "user-service",
+      "error": "Unauthorized: token validation failed",
+      "message": "Downstream auth-service returned 401 on token introspection. RS256 public key not found in keystore.",
+      "count": 412,
+      "first_seen": "2026-04-25T02:02:18Z",
+      "last_seen": "2026-04-25T02:17:44Z",
+      "severity": "critical",
+      "affected_endpoint": "/users/profile",
+      "stack_trace": "Error: Unauthorized\n  at TokenValidator.validate (user-service/src/auth/token-validator.ts:52)"
+    },
+    {
+      "id": "err-003",
+      "service": "api-gateway",
+      "error": "503 Service Unavailable: user-service",
+      "message": "user-service returned 503 due to authentication cascade failure. Circuit breaker opened after 50 consecutive 401s.",
+      "count": 203,
+      "first_seen": "2026-04-25T02:04:01Z",
+      "last_seen": "2026-04-25T02:17:45Z",
+      "severity": "high",
+      "affected_endpoint": "/api/v1/*",
+      "stack_trace": "Error: CircuitBreakerOpen\n  at CircuitBreaker.call (api-gateway/src/circuit-breaker.ts:77)"
+    }
+  ],
+  "serviceMap": {
+    "nodes": [
+      {
+        "id": "api-gateway",
+        "name": "api-gateway",
+        "language": "typescript",
+        "description": "Public-facing API gateway. Handles auth middleware, routing, and rate limiting."
+      },
+      {
+        "id": "auth-service",
+        "name": "auth-service",
+        "language": "typescript",
+        "description": "Issues and validates JWT tokens. Manages signing keys and user sessions."
+      },
+      {
+        "id": "user-service",
+        "name": "user-service",
+        "language": "typescript",
+        "description": "Manages user profiles and preferences. Validates tokens via auth-service."
+      },
+      {
+        "id": "notification-service",
+        "name": "notification-service",
+        "language": "typescript",
+        "description": "Sends email and push notifications. Standalone, no auth dependency."
+      }
+    ],
+    "edges": [
+      { "from": "api-gateway", "to": "auth-service", "via": "JWT middleware validation" },
+      { "from": "api-gateway", "to": "user-service", "via": "HTTP proxy /api/v1/users" },
+      { "from": "user-service", "to": "auth-service", "via": "Token introspection endpoint" }
+    ]
+  }
+}
