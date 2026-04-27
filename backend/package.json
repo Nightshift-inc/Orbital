@@ -1,14 +1,24 @@
 {
-  "name": "back-of-the-orbit",
-  "module": "index.ts",
+  "name": "starter_github_app",
+  "private": true,
+  "version": "0.0.1",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "scripts": {
+    "server": "node app.js",
+    "lint": "standard"
   },
-  "peerDependencies": {
-    "typescript": "^5"
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "smee-client": "^2.0.1",
+    "standard": "^17.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3"
   },
   "dependencies": {
-    "@github/copilot-sdk": "^0.3.0"
+    "@github/copilot": "^1.0.36",
+    "@github/copilot-sdk": "^0.3.0",
+    "dotenv": "^16.0.3",
+    "gh": "^2.8.9",
+    "octokit": "^4.1.1"
   }
 }
